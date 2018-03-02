@@ -1,0 +1,15 @@
+[Unit]
+Description=gpustatd fan control daemon from the minotaur project
+After=network.target
+
+[Service]
+PermissionsStartOnly=true
+Environment="DISPLAY=:0"
+ExecStartPre=/bin/xhost +si:localuser:gpustatd
+ExecStart=/usr/bin/gpustatd --silent
+RestartSec=5
+Restart=always
+User=gpustatd
+
+[Install]
+WantedBy=multi-user.target

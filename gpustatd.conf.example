@@ -1,0 +1,12 @@
+target_temperature: 75
+temperature_limit: 80
+fan_speed_temperature_ratio: 3
+fan_speed_max_when_calibrating: true
+xorg_display_no: 0
+log_file: /var/log/gpustatd/gpustatd.log
+logfile_max_size_mb: 100
+logfile_max_count: 10
+automatically_reload_config_on_change: true
+informative: false
+debug: false
+#ignore_devices: [0]
